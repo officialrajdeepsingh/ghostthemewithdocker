@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  blog:
+    image: ghost
+    restart: always
+    ports:
+      - 8080:2368
+    volumes:
+      - ./assets:/var/lib/ghost/content/themes/fastest/assets
+      - ./partials:/var/lib/ghost/content/themes/fastest/partials
+      - ./author.hbs:/var/lib/ghost/content/themes/fastest/author.hbs
+      - ./default.hbs:/var/lib/ghost/content/themes/fastest/default.hbs
+      - ./error-404.hbs:/var/lib/ghost/content/themes/fastest/error-404.hbs
+      - ./error.hbs:/var/lib/ghost/content/themes/fastest/error.hbs
+      - ./gulpfile.js:/var/lib/ghost/content/themes/fastest/gulpfile.js
+      - ./index.hbs:/var/lib/ghost/content/themes/fastest/index.hbs
+      - ./package-lock.json:/var/lib/ghost/content/themes/fastest/package-lock.json
+      - ./package.json:/var/lib/ghost/content/themes/fastest/package.json
+      - ./page.hbs:/var/lib/ghost/content/themes/fastest/page.hbs
+      - ./post.hbs:/var/lib/ghost/content/themes/fastest/post.hbs
+      - ./tag.hbs:/var/lib/ghost/content/themes/fastest/tag.hbs
+      - ./readme.md:/var/lib/ghost/content/themes/fastest/readme.md
+
+    environment:
+      url: http://localhost:8080
+      NODE_ENV: development
