@@ -1,9 +1,9 @@
 {
     "name": "fastest",
     "description": "Fastest ghost cms base theme. Fastest is light weight, modern open-source theme",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "engines": {
-        "ghost": ">=4.0.0"
+        "ghost": ">=5.0.0"
     },
 
     "license": "MIT",
